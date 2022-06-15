@@ -1,4 +1,4 @@
-ARG NODE_VERSION="14-bullseye"
+ARG NODE_VERSION="16-bullseye"
 ARG OPENJDK_VERSION="11-bullseye"
 FROM node:$NODE_VERSION as node
 FROM openjdk:$OPENJDK_VERSION
