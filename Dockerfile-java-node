@@ -11,7 +11,7 @@ RUN downloadDir=$(xdg-user-dir DOWNLOAD) \
  && echo '#!/bin/bash\njava -Dfile.encoding=UTF-8 -Dhttps.proxyHost=proxy.tcsbank.ru -Dhttps.proxyPort=8080 -jar $(xdg-user-dir DOWNLOAD)/plantuml.jar $@' > /usr/local/bin/plantuml \
  && chmod +x /usr/local/bin/plantuml
 
-ENV NODE_VERSION 20.9.0
+ENV NODE_VERSION 20.19.3
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
   && case "${dpkgArch##*-}" in \
     amd64) ARCH='x64';; \
